@@ -1,0 +1,21 @@
+{
+  "name": "best-bake",
+  "version": "1.0.0",
+  "description": "Bakery Website Design",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "bakery",
+    "design",
+    "template"
+  ],
+  "author": "ahnaafarafee",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
+
+

@@ -1,0 +1,46 @@
+:root {
+  --color-primary: #e0cdbe;
+  --color-primary-light: #e2c6b1;
+  --color-secondary-dark: #fb9b00;
+  --color-secondary: #f9a826;
+  --color-secondary-light: #ffce96;
+  --color-dark: #fafafa;
+  --color-dark-2: #f6f6f6;
+  --color-dark-3: #838383;
+  --color-dark-4: #505050;
+  --color-black: #000000;
+}
+
+// MEDIA QUERY BREAK POINT WIDTH
+// we are using em instead of rem cuz em is the browser font size, and rem is what we override in root html
+$bp-largest: 75em; // 1200px; 1em is 16px;
+$bp-large: 62.5em; // 1000px;
+$bp-medium: 53.125em; // 850px;
+$bp-small: 40.625em; // 650px;
+$bp-smaller: 31.25em; // 500px;
+$bp-smallest: 23.4375em; //375px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Artifika", serif;
+  line-height: 1.6;
+}
