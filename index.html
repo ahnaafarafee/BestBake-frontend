@@ -14,7 +14,31 @@
     <title>Best Bake</title>
   </head>
   <body>
-    <div class="container">
+    <!-- sidenav -->
+    <div id="sidenav" class="sidenav">
+      <div class="sidenav__icon" onclick="closeNav()">
+        <img
+          src="./assets/icon-close.svg"
+          alt="close"
+          class="sidenav__icon--close"
+        />
+      </div>
+      <ul class="sidenav__list">
+        <li class="sidenav__item">
+          <a href="#" class="sidenav__link">cakes</a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#" class="sidenav__link">shop</a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#" class="sidenav__link">dairy</a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#" class="sidenav__link">our story </a>
+        </li>
+      </ul>
+    </div>
+    <div id="container" class="container">
       <!-- navbar -->
       <header class="header">
         <!-- logo -->
@@ -38,6 +62,7 @@
             </li>
           </ul>
         </div>
+
         <!-- icons -->
         <div class="header__icon">
           <a href="#" class="header__icon-item">
@@ -55,7 +80,7 @@
             />
           </a>
         </div>
-        <div class="header__menu">
+        <div class="header__menu" onclick="openNav()">
           <a href="#" class="header__menu-item">
             <img
               src="./assets/icon-hamburger.svg"
@@ -65,6 +90,7 @@
           </a>
         </div>
       </header>
+
       <!-- hero section  -->
       <section class="hero">
         <div class="hero__feature">
@@ -276,5 +302,20 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      // sidenav open
+      function openNav() {
+        document.getElementById("sidenav").style.width = "60%";
+        document.getElementById("container").style.filter = "blur(4px)";
+
+        // background: rgba(0, 0, 0, 0.5);
+      }
+
+      function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+        document.getElementById("container").style.filter = "blur(0)";
+      }
+    </script>
   </body>
 </html>

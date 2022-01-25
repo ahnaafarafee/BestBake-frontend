@@ -93,6 +93,50 @@
   }
 }
 
+.sidenav {
+  // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_right
+  display: none;
+
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    padding-top: 6rem;
+
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icon {
+      cursor: pointer;
+    }
+
+    &__link {
+      // padding: ;
+      padding: 5rem 0;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+  }
+}
+
 .hero {
   display: flex;
   align-items: center;
@@ -333,7 +377,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0rem 10rem;
-    padding: 10rem 0;
+    padding: 5rem 0;
 
     @media only screen and (max-width: $bp-medium) {
       margin: 0rem 5rem;
@@ -341,8 +385,6 @@
 
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
 
     &-box {
@@ -412,7 +454,7 @@
         color: var(--color-dark-3);
 
         @media only screen and (max-width: $bp-smaller) {
-          margin-left: 7rem;
+          text-align: center;
         }
 
         @media only screen and (max-width: $bp-smallest) {
@@ -515,6 +557,7 @@
 
       &--item:not(:last-child) {
         margin-bottom: 1.5rem;
+        cursor: pointer;
       }
 
       &--social {
@@ -523,6 +566,7 @@
 
       &--icon {
         margin-top: 2rem;
+        cursor: pointer;
 
         &:not(:last-child) {
           margin-right: 2.5rem;
